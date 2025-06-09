@@ -3,29 +3,29 @@ import Icon from "@/components/ui/icon";
 
 const classes = [
   {
-    name: "Подрывник",
-    description: "Специалист по взрывчатым веществам и тяжелому вооружению",
+    name: "ДЕМОЛИТОР",
+    description: "Мастер массового уничтожения и тяжелой артиллерии",
     icon: "Bomb",
-    color: "from-red-600 to-orange-600",
-    skills: ["Гранатомет", "Кластерные мины", "Артиллерийский удар"],
+    color: "from-red-700 to-crimson-800",
+    skills: ["Гранатомет М32", "Кластерные боеголовки", "Огневой шторм"],
     image:
       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
   },
   {
-    name: "Снайпер",
-    description: "Мастер дальнего боя и точных выстрелов",
+    name: "СНАЙПЕР-УБИЙЦА",
+    description: "Элитный ликвидатор дальнего действия",
     icon: "Crosshair",
-    color: "from-blue-600 to-cyan-600",
-    skills: ["TAC-50 винтовка", "Дрон-разведчик", "Маркировка целей"],
+    color: "from-red-600 to-red-900",
+    skills: ["TAC-50 убийца", "Боевой дрон-охотник", "Метка смерти"],
     image:
       "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=300&fit=crop",
   },
   {
-    name: "Техник",
-    description: "Эксперт по боевым дронам и технологиям",
-    icon: "Settings",
-    color: "from-green-600 to-emerald-600",
-    skills: ["Штурмовая турель", "Ремонтный дрон", "Химический пуск"],
+    name: "ТЕХНО-ВОИН",
+    description: "Киберспециалист боевых технологий будущего",
+    icon: "Zap",
+    color: "from-crimson-600 to-red-800",
+    skills: ["Плазменная турель", "Дрон-убийца", "Химическая атака"],
     image:
       "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
   },
@@ -36,11 +36,11 @@ const AgentClasses = () => {
     <section className="py-20 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald">
-            СПЕЦИАЛИЗАЦИИ АГЕНТОВ
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 font-oswald animate-neon-flicker">
+            КЛАССЫ УБИЙЦ
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Выберите свой стиль игры и развивайте уникальные навыки
+          <p className="text-xl text-red-400 max-w-2xl mx-auto font-bold">
+            Выбери свой путь уничтожения врагов человечества
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const AgentClasses = () => {
           {classes.map((agentClass, index) => (
             <Card
               key={index}
-              className="bg-slate-800 border-slate-700 hover:border-orange-500/50 transition-all duration-300 group hover:scale-105"
+              className="bg-slate-800 border-red-700 hover:border-red-500 transition-all duration-300 group hover:scale-105 animate-pulse-glow"
             >
               <CardHeader className="text-center">
                 <div
@@ -71,8 +71,8 @@ const AgentClasses = () => {
                 />
                 <p className="text-gray-400 mb-6">{agentClass.description}</p>
                 <div className="space-y-2">
-                  <h4 className="text-orange-500 font-semibold mb-3">
-                    Ключевые навыки:
+                  <h4 className="text-red-400 font-bold mb-3 animate-neon-flicker">
+                    БОЕВОЙ АРСЕНАЛ:
                   </h4>
                   {agentClass.skills.map((skill, skillIndex) => (
                     <div
@@ -80,9 +80,9 @@ const AgentClasses = () => {
                       className="flex items-center text-gray-300"
                     >
                       <Icon
-                        name="Check"
+                        name="Target"
                         size={16}
-                        className="text-green-500 mr-2 flex-shrink-0"
+                        className="text-red-500 mr-2 flex-shrink-0"
                       />
                       <span className="text-sm">{skill}</span>
                     </div>

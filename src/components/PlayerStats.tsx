@@ -43,11 +43,11 @@ const PlayerStats = () => {
     <section className="py-20 bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald">
-            ПРОФИЛЬ АГЕНТА
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 font-oswald animate-neon-flicker">
+            ДОСЬЕ УБИЙЦЫ
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Отслеживайте свой прогресс и достижения
+          <p className="text-xl text-red-400 max-w-2xl mx-auto font-bold">
+            Отслеживай свои достижения в искусстве войны
           </p>
         </div>
 
@@ -57,11 +57,11 @@ const PlayerStats = () => {
             <CardHeader>
               <CardTitle className="text-white font-oswald flex items-center">
                 <Icon
-                  name="TrendingUp"
-                  className="mr-2 text-orange-500"
+                  name="Crosshair"
+                  className="mr-2 text-red-500"
                   size={24}
                 />
-                Статистика прогресса
+                Боевая статистика
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -71,7 +71,7 @@ const PlayerStats = () => {
                     <span className="text-gray-300 font-medium">
                       {stat.label}
                     </span>
-                    <span className="text-orange-400 font-bold">
+                    <span className="text-red-400 font-bold">
                       {stat.value}/{stat.max}
                     </span>
                   </div>
@@ -85,16 +85,20 @@ const PlayerStats = () => {
               <div className="pt-4 border-t border-slate-700">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-orange-500">
+                    <div className="text-2xl font-bold text-red-500 animate-neon-flicker">
                       247
                     </div>
-                    <div className="text-sm text-gray-400">Часов игры</div>
+                    <div className="text-sm text-gray-400 font-semibold">
+                      ЧАСОВ ВОЙНЫ
+                    </div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-orange-500">
+                    <div className="text-2xl font-bold text-red-500 animate-neon-flicker">
                       1,847
                     </div>
-                    <div className="text-sm text-gray-400">Убийств</div>
+                    <div className="text-sm text-gray-400 font-semibold">
+                      ПОДТВЕРЖДЕННЫХ УБИЙСТВ
+                    </div>
                   </div>
                 </div>
               </div>
@@ -105,8 +109,8 @@ const PlayerStats = () => {
           <Card className="bg-slate-900 border-slate-700">
             <CardHeader>
               <CardTitle className="text-white font-oswald flex items-center">
-                <Icon name="Award" className="mr-2 text-orange-500" size={24} />
-                Достижения
+                <Icon name="Skull" className="mr-2 text-red-500" size={24} />
+                Боевые награды
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -136,8 +140,8 @@ const PlayerStats = () => {
                         {achievement.name}
                       </h4>
                       {achievement.completed && (
-                        <Badge className="bg-green-600 text-white text-xs">
-                          Получено
+                        <Badge className="bg-red-600 text-white text-xs font-bold animate-pulse">
+                          ПОЛУЧЕНО
                         </Badge>
                       )}
                     </div>
@@ -151,7 +155,7 @@ const PlayerStats = () => {
               <div className="text-center pt-4 border-t border-slate-700">
                 <div className="text-sm text-gray-400">
                   Прогресс достижений:{" "}
-                  <span className="text-orange-400 font-semibold">2/4</span>
+                  <span className="text-red-400 font-bold">2/4</span>
                 </div>
               </div>
             </CardContent>

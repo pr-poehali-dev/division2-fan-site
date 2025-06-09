@@ -4,44 +4,44 @@ import Icon from "@/components/ui/icon";
 
 const weapons = [
   {
-    category: "Штурмовые винтовки",
+    category: "Штурмовое вооружение",
     icon: "Zap",
     count: 25,
-    description: "Универсальное оружие для средних дистанций",
-    examples: ["AK-47", "M4A1", "SCAR-L"],
-    damage: "Высокий",
+    description: "Смертоносное оружие для ближнего уничтожения",
+    examples: ["AK-74 УБИЙЦА", "M4A1 ХИЩНИК", "SCAR-L ТЕРМИНАТОР"],
+    damage: "СМЕРТЕЛЬНЫЙ",
     range: "Средний",
-    accuracy: "Высокая",
+    accuracy: "КРИТИЧЕСКАЯ",
   },
   {
-    category: "Снайперские винтовки",
+    category: "Снайперские орудия",
     icon: "Target",
     count: 18,
-    description: "Точное оружие дальнего боя",
-    examples: ["M700", "SVD", "Hunting M44"],
-    damage: "Критический",
-    range: "Дальний",
-    accuracy: "Максимальная",
+    description: "Оружие бесшумного истребления на расстоянии",
+    examples: ["M700 ПАЛАЧ", "SVD ЖНЕЦ", "Hunting M44 ОХОТНИК"],
+    damage: "МГНОВЕННАЯ СМЕРТЬ",
+    range: "ЭКСТРЕМАЛЬНЫЙ",
+    accuracy: "АБСОЛЮТНАЯ",
   },
   {
-    category: "Пулеметы",
+    category: "Тяжелая артиллерия",
     icon: "Flame",
     count: 15,
-    description: "Тяжелое вооружение для подавления",
-    examples: ["M60", "MG5", "M249 Para"],
-    damage: "Очень высокий",
+    description: "Орудия массового подавления противника",
+    examples: ["M60 РАЗРУШИТЕЛЬ", "MG5 ДЕМОН", "M249 БУРЯ"],
+    damage: "КАТАСТРОФИЧЕСКИЙ",
     range: "Средний",
-    accuracy: "Средняя",
+    accuracy: "ПОДАВЛЯЮЩАЯ",
   },
   {
-    category: "Пистолеты-пулеметы",
+    category: "Скорострельное оружие",
     icon: "Zap",
     count: 20,
-    description: "Быстрое оружие ближнего боя",
-    examples: ["Vector", "MP5", "UMP-45"],
-    damage: "Средний",
-    range: "Ближний",
-    accuracy: "Средняя",
+    description: "Быстрое орудие ближнего истребления",
+    examples: ["Vector МОЛНИЯ", "MP5 ШТОРМ", "UMP-45 ФУРИЯ"],
+    damage: "ВЫСОКИЙ",
+    range: "БЛИЖНИЙ",
+    accuracy: "ТОЧНАЯ",
   },
 ];
 
@@ -50,11 +50,11 @@ const WeaponCategories = () => {
     <section className="py-20 bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-oswald">
-            АРСЕНАЛ АГЕНТА
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 font-oswald animate-neon-flicker">
+            АРСЕНАЛ СМЕРТИ
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Более 100 видов оружия для любого стиля боя
+          <p className="text-xl text-red-400 max-w-2xl mx-auto font-bold">
+            Более 100 орудий уничтожения для любого стиля ликвидации
           </p>
         </div>
 
@@ -62,14 +62,14 @@ const WeaponCategories = () => {
           {weapons.map((weapon, index) => (
             <Card
               key={index}
-              className="bg-slate-900 border-slate-700 hover:border-orange-500/50 transition-all duration-300 group"
+              className="bg-slate-900 border-red-700 hover:border-red-500 transition-all duration-300 group hover:animate-pulse-glow"
             >
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-orange-600/20 flex items-center justify-center group-hover:bg-orange-600/30 transition-colors">
+                <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-red-600/30 flex items-center justify-center group-hover:bg-red-600/50 transition-colors animate-pulse">
                   <Icon
                     name={weapon.icon as any}
                     size={28}
-                    className="text-orange-500"
+                    className="text-red-500"
                   />
                 </div>
                 <CardTitle className="text-lg text-white font-oswald">
@@ -77,9 +77,9 @@ const WeaponCategories = () => {
                 </CardTitle>
                 <Badge
                   variant="secondary"
-                  className="bg-orange-600/20 text-orange-400 border-orange-600/30"
+                  className="bg-red-600/30 text-red-400 border-red-600/50 font-bold"
                 >
-                  {weapon.count} видов
+                  {weapon.count} ТИПОВ
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -88,15 +88,21 @@ const WeaponCategories = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-500">Урон:</span>
-                    <span className="text-orange-400">{weapon.damage}</span>
+                    <span className="text-red-400 font-bold">
+                      {weapon.damage}
+                    </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-500">Дальность:</span>
-                    <span className="text-orange-400">{weapon.range}</span>
+                    <span className="text-red-400 font-bold">
+                      {weapon.range}
+                    </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-500">Точность:</span>
-                    <span className="text-orange-400">{weapon.accuracy}</span>
+                    <span className="text-red-400 font-bold">
+                      {weapon.accuracy}
+                    </span>
                   </div>
                 </div>
 
